@@ -1,0 +1,19 @@
+; BIND zone file for goetheprep.com
+; Import this into Cloudflare DNS
+
+; Apex domain — GitHub Pages A records
+goetheprep.com.  300  IN  A  185.199.108.153
+goetheprep.com.  300  IN  A  185.199.109.153
+goetheprep.com.  300  IN  A  185.199.110.153
+goetheprep.com.  300  IN  A  185.199.111.153
+
+; www redirect
+www  300  IN  CNAME  omaracgithub.github.io.
+
+; Level subdomains
+a1  300  IN  CNAME  omaracgithub.github.io.
+a2  300  IN  CNAME  omaracgithub.github.io.
+b1  300  IN  CNAME  omaracgithub.github.io.
+b2  300  IN  CNAME  omaracgithub.github.io.
+c1  300  IN  CNAME  omaracgithub.github.io.
+c2  300  IN  CNAME  omaracgithub.github.io.
