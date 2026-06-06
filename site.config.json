@@ -1,0 +1,54 @@
+{
+  "domain": "goetheprep.com",
+  "brand": "GoethePrep",
+  "levels": {
+    "a1": {
+      "code": "A1",
+      "name": "Goethe-Zertifikat A1",
+      "cefr": "Beginner",
+      "tagline": "Your first Goethe certificate — everyday German basics.",
+      "examDuration": "~65 min written + ~15 min speaking",
+      "useCase": "Family reunification, basic residence requirements, and proof of starter German."
+    },
+    "a2": {
+      "code": "A2",
+      "name": "Goethe-Zertifikat A2",
+      "cefr": "Elementary",
+      "tagline": "Solid elementary German for work, travel, and daily life.",
+      "examDuration": "~90 min written + ~15 min speaking",
+      "useCase": "Jobs requiring basic German, some visa pathways, and further study toward B1."
+    },
+    "b1": {
+      "code": "B1",
+      "name": "Goethe-Zertifikat B1",
+      "cefr": "Intermediate",
+      "tagline": "The standard intermediate exam — citizenship, work, and study.",
+      "examDuration": "~2 h 15 min written + ~15 min speaking",
+      "useCase": "German citizenship, many employers, and Studienkolleg preparation."
+    },
+    "b2": {
+      "code": "B2",
+      "name": "Goethe-Zertifikat B2",
+      "cefr": "Upper intermediate",
+      "tagline": "Upper-intermediate proof for university and professional roles.",
+      "examDuration": "~3 h written + ~15 min speaking",
+      "useCase": "University admission, regulated professions, and skilled migration."
+    },
+    "c1": {
+      "code": "C1",
+      "name": "Goethe-Zertifikat C1",
+      "cefr": "Advanced",
+      "tagline": "Advanced German for academic and professional excellence.",
+      "examDuration": "~3 h 10 min written + ~16 min speaking",
+      "useCase": "University study in German, advanced workplaces, and teaching pathways."
+    },
+    "c2": {
+      "code": "C2",
+      "name": "Goethe-Zertifikat C2",
+      "cefr": "Mastery",
+      "tagline": "Near-native mastery — the highest Goethe certificate.",
+      "examDuration": "~4 h written + ~15 min speaking",
+      "useCase": "Academic teaching, translation, and demonstrating near-native competence."
+    }
+  }
+}

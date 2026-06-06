@@ -1,0 +1,40 @@
+# GoethePrep
+
+> GoethePrep is an unofficial iOS app (iPhone and iPad) for Goethe German exam preparation at all CEFR levels. App Store only.
+
+## Domains
+
+| Site | URL | Focus |
+|------|-----|-------|
+| Main (all levels) | https://goetheprep.com/ | Hub, A1–C2 overview |
+| A1 | https://a1.goetheprep.com/ | Goethe-Zertifikat A1 |
+| A2 | https://a2.goetheprep.com/ | Goethe-Zertifikat A2 |
+| B1 | https://b1.goetheprep.com/ | Goethe-Zertifikat B1 |
+| B2 | https://b2.goetheprep.com/ | Goethe-Zertifikat B2 |
+| C1 | https://c1.goetheprep.com/ | Goethe-Zertifikat C1 |
+| C2 | https://c2.goetheprep.com/ | Goethe-Zertifikat C2 |
+
+Sitemap: https://goetheprep.com/sitemap.xml
+
+## App
+
+Platform: iOS 16+ (iPhone and iPad). App Store only.
+
+Features per level: 7 practice exams (/100), quick drills, audio, AI writing review, stats.
+
+Not affiliated with the Goethe-Institut.
+
+## Blog structure
+
+- Main blog: https://goetheprep.com/blog/ — cross-level guides
+- Level blogs: https://{level}.goetheprep.com/blog/ — e.g. b1.goetheprep.com/blog/
+
+Each level site has a dedicated exam format article plus shared guides (passing score, Hören, Schreiben, study plan).
+
+## Regenerating sites
+
+After editing site.config.json, run: `python3 scripts/generate-level-sites.py`
+
+## Deployment
+
+See deploy/README.md for GitHub Pages and subdomain DNS setup.

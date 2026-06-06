@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://goetheprep.com/sitemap.xml
+
+# Agent-friendly site summary
+# See also: https://goetheprep.com/llms.txt
