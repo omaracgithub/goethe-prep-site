@@ -18,50 +18,39 @@
     var optsHtml = data.options
       .map(function (opt, i) {
         return (
-          '<button class="demo-quiz__opt" data-i="' +
-          i +
-          '">' +
-          "<span>" +
-          letters[i] +
-          ") " +
-          opt.text +
-          "</span>" +
+          '<button class="demo-quiz__opt" data-i="' + i + '">' +
+          "<span>" + letters[i] + ") " + opt.text + "</span>" +
           '<span class="mark"></span>' +
           "</button>"
         );
       })
       .join("");
 
+    var tag = data.tag || "Reading · Question 1 of 5";
+
     root.innerHTML =
-      '<div class="demo-quiz__bar">' +
-      '<span class="demo-quiz__close">&times;</span>' +
-      '<span class="demo-quiz__label">Practice · Question 1 of 5</span>' +
+      '<div class="demo-quiz__top">' +
+        '<span class="demo-quiz__tag">' + tag + "</span>" +
+        '<span class="demo-quiz__dots">' +
+          '<span class="demo-quiz__dot is-current"></span>' +
+          '<span class="demo-quiz__dot"></span>' +
+          '<span class="demo-quiz__dot"></span>' +
+          '<span class="demo-quiz__dot"></span>' +
+          '<span class="demo-quiz__dot"></span>' +
+        "</span>" +
       "</div>" +
-      '<div class="demo-quiz__dots">' +
-      '<span class="demo-quiz__dot is-current"></span>' +
-      '<span class="demo-quiz__dot"></span>' +
-      '<span class="demo-quiz__dot"></span>' +
-      '<span class="demo-quiz__dot"></span>' +
-      '<span class="demo-quiz__dot"></span>' +
-      "</div>" +
-      '<div class="demo-quiz__body">' +
-      (data.passage
-        ? '<div class="demo-quiz__passage">' + data.passage + "</div>"
-        : "") +
-      '<p class="demo-quiz__q">' + data.question + "</p>" +
-      '<div class="demo-quiz__opts">' + optsHtml + "</div>" +
-      '<div class="demo-quiz__feedback" id="demo-quiz-feedback"></div>' +
-      "</div>" +
-      '<div class="demo-quiz__footer">' +
-      '<button class="demo-quiz__next" id="demo-quiz-next">Next question</button>' +
+      '<div class="demo-quiz__inner">' +
+        (data.passage ? '<div class="demo-quiz__passage">' + data.passage + "</div>" : "") +
+        '<p class="demo-quiz__q">' + data.question + "</p>" +
+        '<div class="demo-quiz__opts">' + optsHtml + "</div>" +
+        '<div class="demo-quiz__feedback" id="demo-quiz-feedback"></div>' +
+        '<button class="demo-quiz__next" id="demo-quiz-next">Try another question</button>' +
       "</div>";
 
     root.querySelectorAll(".demo-quiz__opt").forEach(function (btn) {
       btn.addEventListener("click", onSelect);
     });
-    var next = document.getElementById("demo-quiz-next");
-    next.addEventListener("click", function () {
-      // Reset for a replay of the demo
+    document.getElementById("demo-quiz-next").addEventListener("click", function () {
       answered = false;
       render();
     });
@@ -72,9 +61,8 @@
     answered = true;
     var chosen = parseInt(e.currentTarget.getAttribute("data-i"), 10);
     var correctIdx = data.correct;
-    var btns = root.querySelectorAll(".demo-quiz__opt");
 
-    btns.forEach(function (btn, i) {
+    root.querySelectorAll(".demo-quiz__opt").forEach(function (btn, i) {
       btn.disabled = true;
       var mark = btn.querySelector(".mark");
       if (i === correctIdx) {
@@ -92,22 +80,16 @@
     var fb = document.getElementById("demo-quiz-feedback");
     fb.className = "demo-quiz__feedback show " + (isCorrect ? "correct" : "wrong");
     fb.innerHTML =
-      "<strong>" +
-      (isCorrect ? "✓ Correct" : "✗ Incorrect") +
-      "</strong>" +
+      "<strong>" + (isCorrect ? "✓ Correct" : "✗ Incorrect") + "</strong>" +
       (isCorrect ? data.explanationCorrect : data.explanationWrong);
 
-    // Update progress dot
     var dot = root.querySelector(".demo-quiz__dot.is-current");
     if (dot) {
       dot.classList.remove("is-current");
       dot.classList.add(isCorrect ? "is-correct" : "is-wrong");
-      dot.textContent = isCorrect ? "✓" : "✗";
     }
 
-    var next = document.getElementById("demo-quiz-next");
-    next.classList.add("ready");
-    next.textContent = "Try again";
+    document.getElementById("demo-quiz-next").classList.add("ready");
   }
 
   render();
