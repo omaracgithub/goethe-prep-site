@@ -967,6 +967,25 @@ h3 { font-size: 1.35rem; font-weight: 600; }
 
 
 /* ── Interactive demo question card ── */
+.demo-quiz-wrap { width: 100%; }
+.demo-quiz__heading {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 0 0 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.demo-quiz__heading::before {
+  content: "";
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  box-shadow: 0 0 0 4px rgba(15,76,92,0.15);
+}
 .demo-quiz {
   width: 100%;
   max-width: 440px;
