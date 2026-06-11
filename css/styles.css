@@ -483,15 +483,7 @@ h3 { font-size: 1.35rem; font-weight: 600; }
   background: #2c2c2e;
 }
 
-.device-island {
-  width: 96px;
-  height: 28px;
-  background: #000;
-  border-radius: 20px;
-  margin: 4px auto 10px;
-  position: relative;
-  z-index: 2;
-}
+/* device-island removed — screenshots include their own status bar */
 
 /* ── Screenshot placeholders ── */
 .screenshot-placeholder {
