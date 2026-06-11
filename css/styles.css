@@ -1127,3 +1127,38 @@ h3 { font-size: 1.35rem; font-weight: 600; }
 @media (max-width: 900px) {
   .demo-quiz { max-width: 480px; }
 }
+
+/* ── Demo quiz header (above the card) ── */
+.demo-quiz-header {
+  max-width: 440px;
+  margin: 0 auto 1rem;
+  text-align: center;
+}
+.demo-quiz-header__pill {
+  display: inline-block;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  background: var(--color-primary-light);
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+  margin-bottom: 0.65rem;
+}
+.demo-quiz-header__title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--color-ink);
+  margin: 0 0 0.35rem;
+  line-height: 1.2;
+}
+.demo-quiz-header__sub {
+  font-size: 0.9rem;
+  color: var(--color-ink-muted);
+  margin: 0;
+  line-height: 1.45;
+}
+@media (max-width: 900px) {
+  .demo-quiz-header { max-width: 480px; }
+}
