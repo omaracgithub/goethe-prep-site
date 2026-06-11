@@ -11,10 +11,14 @@
   }
   if (!data || !data.options) return;
 
-  var answered = false;
   var letters = ["A", "B", "C", "D"];
+  var selected = null;
+  var checked = false;
 
   function render() {
+    selected = null;
+    checked = false;
+
     var optsHtml = data.options
       .map(function (opt, i) {
         return (
@@ -26,49 +30,59 @@
       })
       .join("");
 
-    var tag = data.tag || "Reading · Question 1 of 5";
+    var tag = data.tag || "Reading";
 
     root.innerHTML =
       '<div class="demo-quiz__top">' +
         '<span class="demo-quiz__tag">' + tag + "</span>" +
-        '<span class="demo-quiz__dots">' +
-          '<span class="demo-quiz__dot is-current"></span>' +
-          '<span class="demo-quiz__dot"></span>' +
-          '<span class="demo-quiz__dot"></span>' +
-          '<span class="demo-quiz__dot"></span>' +
-          '<span class="demo-quiz__dot"></span>' +
-        "</span>" +
+        '<span class="demo-quiz__badge">Sample question</span>' +
       "</div>" +
       '<div class="demo-quiz__inner">' +
         (data.passage ? '<div class="demo-quiz__passage">' + data.passage + "</div>" : "") +
         '<p class="demo-quiz__q">' + data.question + "</p>" +
         '<div class="demo-quiz__opts">' + optsHtml + "</div>" +
         '<div class="demo-quiz__feedback" id="demo-quiz-feedback"></div>' +
-        '<button class="demo-quiz__next" id="demo-quiz-next">Try another question</button>' +
+        '<button class="demo-quiz__cta" id="demo-quiz-cta" disabled>Check answer</button>' +
       "</div>";
 
     root.querySelectorAll(".demo-quiz__opt").forEach(function (btn) {
-      btn.addEventListener("click", onSelect);
+      btn.addEventListener("click", function () { onSelect(btn); });
     });
-    document.getElementById("demo-quiz-next").addEventListener("click", function () {
-      answered = false;
-      render();
-    });
+    document.getElementById("demo-quiz-cta").addEventListener("click", onCta);
   }
 
-  function onSelect(e) {
-    if (answered) return;
-    answered = true;
-    var chosen = parseInt(e.currentTarget.getAttribute("data-i"), 10);
+  function onSelect(btn) {
+    if (checked) return;
+    selected = parseInt(btn.getAttribute("data-i"), 10);
+    root.querySelectorAll(".demo-quiz__opt").forEach(function (b) {
+      b.classList.toggle("selected", b === btn);
+    });
+    var cta = document.getElementById("demo-quiz-cta");
+    cta.disabled = false;
+    cta.classList.add("ready");
+  }
+
+  function onCta() {
+    if (!checked) {
+      if (selected === null) return;
+      reveal();
+    } else {
+      render();
+    }
+  }
+
+  function reveal() {
+    checked = true;
     var correctIdx = data.correct;
 
     root.querySelectorAll(".demo-quiz__opt").forEach(function (btn, i) {
       btn.disabled = true;
+      btn.classList.remove("selected");
       var mark = btn.querySelector(".mark");
       if (i === correctIdx) {
         btn.classList.add("correct");
         mark.textContent = "✓";
-      } else if (i === chosen) {
+      } else if (i === selected) {
         btn.classList.add("wrong");
         mark.textContent = "✗";
       } else {
@@ -76,20 +90,15 @@
       }
     });
 
-    var isCorrect = chosen === correctIdx;
+    var isCorrect = selected === correctIdx;
     var fb = document.getElementById("demo-quiz-feedback");
     fb.className = "demo-quiz__feedback show " + (isCorrect ? "correct" : "wrong");
     fb.innerHTML =
       "<strong>" + (isCorrect ? "✓ Correct" : "✗ Incorrect") + "</strong>" +
       (isCorrect ? data.explanationCorrect : data.explanationWrong);
 
-    var dot = root.querySelector(".demo-quiz__dot.is-current");
-    if (dot) {
-      dot.classList.remove("is-current");
-      dot.classList.add(isCorrect ? "is-correct" : "is-wrong");
-    }
-
-    document.getElementById("demo-quiz-next").classList.add("ready");
+    var cta = document.getElementById("demo-quiz-cta");
+    cta.textContent = "Try again";
   }
 
   render();
