@@ -262,7 +262,7 @@ h3 { font-size: 1.35rem; font-weight: 600; }
 
 .levels-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
 }
 
