@@ -1,0 +1,30 @@
+/* RTL Support for Arabic pages */
+html[dir="rtl"] body { direction: rtl; text-align: right; }
+html[dir="rtl"] .site-header { flex-direction: row-reverse; }
+html[dir="rtl"] .site-header nav { flex-direction: row-reverse; }
+html[dir="rtl"] .hero-content { text-align: right; }
+html[dir="rtl"] .cta-row { flex-direction: row-reverse; }
+html[dir="rtl"] .features .grid { direction: rtl; }
+html[dir="rtl"] .feature { text-align: right; }
+html[dir="rtl"] .seo-prose { text-align: right; direction: rtl; }
+html[dir="rtl"] .seo-prose ul { padding-right: 1.5rem; padding-left: 0; }
+html[dir="rtl"] .post-list { text-align: right; }
+html[dir="rtl"] .site-footer { text-align: right; }
+html[dir="rtl"] .footer-nav { flex-direction: row-reverse; }
+html[dir="rtl"] .btn svg { margin-right: 0; margin-left: 6px; }
+html[dir="rtl"] .logo, html[dir="rtl"] [dir="ltr"] { direction: ltr; unicode-bidi: embed; }
+
+/* Goethe-specific RTL */
+html[dir="rtl"] .header-inner { flex-direction: row-reverse; }
+html[dir="rtl"] .hero-grid { direction: rtl; }
+html[dir="rtl"] .showcase-row { direction: rtl; }
+html[dir="rtl"] .showcase-copy { text-align: right; }
+html[dir="rtl"] .showcase-list { padding-right: 1.2rem; padding-left: 0; }
+html[dir="rtl"] .trust-grid { direction: rtl; }
+html[dir="rtl"] .blog-preview-grid { direction: rtl; }
+html[dir="rtl"] .blog-preview-card { text-align: right; }
+html[dir="rtl"] .faq-item summary { text-align: right; }
+html[dir="rtl"] .faq-item p { text-align: right; }
+html[dir="rtl"] .cta-inner { direction: rtl; }
+html[dir="rtl"] .footer-grid { direction: rtl; text-align: right; }
+html[dir="rtl"] .lang-selector__dropdown { left: auto; right: 0; }
