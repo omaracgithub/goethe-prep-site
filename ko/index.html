@@ -3,20 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GoethePrep — Pass your Goethe exam.First try.</title>
-  <meta name="description" content="Your fastest path to certification. Seven full practice exams per level, calibrated on the current Goethe-Zertifikat specifications — Reading, Listening, Writing, and Speaking. Unlimited attempts. No timer on practice.">
+  <meta name="description" content="괴테 시험 합격. 한 번에. 레벨당 7개의 모의시험(A1–C2)을 현행 Goethe-Zertifikat 사양에 맞춰 제작. 오디오 드릴, AI 작문 피드백, 진도 통계 포함.">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="GoethePrep">
   <meta name="theme-color" content="#f5f5f7">
   <link rel="icon" href="/assets/images/app-icon.jpg" type="image/jpeg">
   <link rel="apple-touch-icon" href="/assets/images/app-icon.jpg">
   <link rel="canonical" href="https://goetheprep.com/ko/">
+  <title>GoethePrep — 괴테 시험 준비 A1–C2 (iOS)</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/styles.css?v=20260707b">
-  <link rel="stylesheet" href="/css/blog.css?v=20260707a">
-  <link rel="stylesheet" href="/shared/lang-selector.css">
+  <link rel="stylesheet" href="/css/styles.css?v=20260611e">
+  <link rel="stylesheet" href="/css/blog.css?v=20260611e">
   <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
   <!-- GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-YB13BHW7X5"></script>
@@ -26,11 +25,13 @@
     gtag("js", new Date());
     gtag("config", "G-YB13BHW7X5", { anonymize_ip: true });
   </script>
+  <link rel="stylesheet" href="/shared/lang-selector.css">
 </head>
 <body>
+
   <header class="site-header" id="top">
     <div class="container header-inner">
-      <a href="/ko/" class="logo">
+      <a href="#top" class="logo">
         <img src="/assets/images/app-icon.jpg" alt="" width="56" height="56" style="border-radius:12px;vertical-align:middle;margin-right:10px;">
         <span class="logo-text">Goethe<span class="logo-accent">Prep</span></span>
       </a>
@@ -38,23 +39,26 @@
         <span></span><span></span><span></span>
       </button>
       <nav class="site-nav" id="site-nav">
-        <a href="/ko/#levels">Levels</a>
-        <a href="/ko/#features">Features</a>
+        <a href="#levels">레벨</a>
+        <a href="#features">기능</a>
         <a href="/ko/blog/">Blog</a>
-        <a href="/ko/#faq">FAQ</a>
-        <a href="/ko/#download" class="nav-cta">App Store</a>
+        <a href="#faq">FAQ</a>
+        <a href="#download" class="nav-cta">App Store</a>
       </nav>
     </div>
   </header>
 
   <main>
+
     <!-- Hero -->
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-content reveal">
           <p class="eyebrow">A1 · A2 · B1 · B2 · C1 · C2 · iOS</p>
-          <h1>Pass your Goethe exam.<br>First try.</h1>
-          <p class="hero-lead">Your fastest path to certification. Seven full practice exams per level, calibrated on the current Goethe-Zertifikat specifications — Reading, Listening, Writing, and Speaking. Unlimited attempts. No timer on practice.</p>
+          <h1>괴테 시험 합격.<br>한 번에.</h1>
+          <p class="hero-lead">
+            자격증 취득의 가장 빠른 길. 레벨당 7개의 완전한 모의시험을 현행 Goethe-Zertifikat 사양에 맞춰 제작 — 읽기, 듣기, 쓰기, 말하기. 무제한 응시. 연습 시 타이머 없음.
+          </p>
           <div class="hero-actions">
             <a href="https://apps.apple.com/app/goetheprep/id6776348982?pt=126845029&ct=goetheprep-main&mt=8" class="app-store-badge app-store-badge--lg" aria-label="Download on the App Store">
               <svg class="app-store-badge__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
@@ -62,86 +66,234 @@
             </a>
             <a href="#features" class="btn btn-secondary">See features</a>
           </div>
-          <p class="ios-requirements">Requires iOS 16 or later · Optimised for iPhone and iPad</p>
+          <p class="ios-requirements">iOS 16 이상 필요 · iPhone 및 iPad에 최적화</p>
         </div>
 
         <div class="hero-visual reveal reveal-delay">
+          <div class="demo-quiz" id="demo-quiz" data-question='{"tag": "Reading", "passage": "Hallo Lena, am Samstag mache ich eine kleine Geburtstagsfeier bei mir zu Hause. Wir fangen um 18 Uhr an. Bring bitte nichts mit, für Essen und Getränke ist gesorgt. Wenn du möchtest, kannst du gern deine Schwester mitbringen. Sag mir bis Donnerstag Bescheid, ob du kommst. Liebe Grüße, Markus", "question": "Was soll Lena bis Donnerstag machen?", "options": [{"text": "Etwas zu essen vorbereiten."}, {"text": "Markus sagen, ob sie kommt."}, {"text": "Ihre Schwester nach Hause bringen."}], "correct": 1, "explanationCorrect": "Correct. Markus writes “Sag mir bis Donnerstag Bescheid, ob du kommst” (let me know by Thursday whether you&#39;re coming). So Lena should reply whether she will attend.", "explanationWrong": "Not quite. The message says “let me know by Thursday whether you&#39;re coming” — Lena only needs to confirm if she&#39;s attending. Food and drinks are already taken care of."}'>
+          </div>
         </div>
       </div>
     </section>
-    <!-- Level selection (hub sites only) -->
+
+    <!-- Level selection -->
     <section class="section section-alt" id="levels">
       <div class="container">
         <div class="section-header center reveal">
-          <p class="eyebrow">Choose your exam</p>
-          <h2>Pick your exam level</h2>
+          <p class="eyebrow">시험 선택</p>
+          <h2>괴테 시험 레벨 선택</h2>
           <p>From beginner to mastery — select the level you're preparing for and get tailored practice, guides, and tips.</p>
         </div>
         <div class="levels-grid reveal">
           <a href="https://a1.goetheprep.com/" target="_blank" rel="noopener" class="level-link-card">
             <strong>A1</strong>
-            <span>Beginner</span>
-            <small>Everyday basics & first certificate ↗</small>
+            <span>초급</span>
+            <small>일상 기초와 첫 자격증 ↗</small>
           </a>
           <a href="https://a2.goetheprep.com/" target="_blank" rel="noopener" class="level-link-card">
             <strong>A2</strong>
-            <span>Elementary</span>
-            <small>Simple conversations & routine tasks ↗</small>
+            <span>기초</span>
+            <small>간단한 대화와 일상 업무 ↗</small>
           </a>
           <a href="https://b1.goetheprep.com/" target="_blank" rel="noopener" class="level-link-card">
             <strong>B1</strong>
-            <span>Intermediate</span>
-            <small>Citizenship, work & daily independence ↗</small>
+            <span>중급</span>
+            <small>시민권, 취업, 일상 자립 ↗</small>
           </a>
           <a href="https://b2.goetheprep.com/" target="_blank" rel="noopener" class="level-link-card">
             <strong>B2</strong>
-            <span>Upper intermediate</span>
-            <small>University admission & professional roles ↗</small>
+            <span>중상급</span>
+            <small>대학 입학과 전문직 ↗</small>
           </a>
           <a href="https://c1.goetheprep.com/" target="_blank" rel="noopener" class="level-link-card">
             <strong>C1</strong>
-            <span>Advanced</span>
-            <small>Academic study & demanding professions ↗</small>
+            <span>고급</span>
+            <small>학술 연구와 전문직 ↗</small>
           </a>
           <a href="https://c2.goetheprep.com/" target="_blank" rel="noopener" class="level-link-card">
             <strong>C2</strong>
-            <span>Mastery</span>
-            <small>Near-native proficiency & GDS diploma ↗</small>
+            <span>최상급</span>
+            <small>원어민급 능력과 GDS 자격 ↗</small>
           </a>
         </div>
       </div>
     </section>
+
     <!-- Trust strip -->
     <section class="trust-strip">
       <div class="container trust-grid">
+        <div class="trust-item"><strong>7</strong><span>완전한 모의시험</span></div>
+        <div class="trust-item"><strong>100</strong><span>시험당 배점</span></div>
+        <div class="trust-item"><strong>4</strong><span>기술 영역 커버</span></div>
+        <div class="trust-item"><strong>iOS</strong><span>iPhone·iPad 네이티브</span></div>
       </div>
     </section>
-    <!-- Features -->
+
+    <!-- Features (zigzag with screenshots) -->
     <section class="section" id="features">
       <div class="container">
         <div class="section-header center reveal">
-          <p class="eyebrow">Everything you need</p>
-          <h2>Built for real exam preparation</h2>
-          <p>Not a generic language app — every feature mirrors official exam structure, timing, and scoring.</p>
+          <p class="eyebrow">필요한 모든 것</p>
+          <h2>실제 괴테 준비를 위해 설계</h2>
+          <p>일반 어학 앱이 아닌 — 모든 기능이 A1부터 C2까지 공식 시험 구조, 시간, 채점을 반영.</p>
         </div>
 
         <div class="feature-showcase">
+          <article class="showcase-row reveal">
+            <div class="showcase-copy">
+              <span class="showcase-tag">완전한 시험</span>
+              <h3>공식 형식 모의시험 7회분</h3>
+              <p>
+                100점 만점으로 채점되는 완전한 모의시험 — 읽기, 듣기, 쓰기, 말하기를 한 세션에. 시험 당일과 동일.
+              </p>
+              <ul class="showcase-list">
+                <li>실제 섹션 시간</li>
+                <li>시험당 100점 만점</li>
+                <li>일시정지, 재개, 복습</li>
+              </ul>
+            </div>
+            <div class="showcase-visual">
+              <div class="device-frame device-phone has-shot">
+                <figure class="screenshot-placeholder">
+                  <img src="/assets/screenshots/exam.jpg" alt="Practice exam list" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+          </article>
+
+          <article class="showcase-row reverse reveal">
+            <div class="showcase-copy">
+              <span class="showcase-tag">빠른 연습</span>
+              <h3>몇 분 만에 기술 향상</h3>
+              <p>
+                완전한 시험 사이에 기술별 5–15분 집중 드릴. 출퇴근이나 점심시간에 완벽.
+              </p>
+              <ul class="showcase-list">
+                <li>읽기, 듣기, 쓰기, 말하기</li>
+                <li>섹션별 미니 세션</li>
+                <li>즉시 결과 확인</li>
+              </ul>
+            </div>
+            <div class="showcase-visual">
+              <div class="device-frame device-phone has-shot">
+                <figure class="screenshot-placeholder">
+                  <img src="/assets/screenshots/home.png" alt="Quick practice drills" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+          </article>
+
+          <article class="showcase-row reveal">
+            <div class="showcase-copy">
+              <span class="showcase-tag">오디오</span>
+              <h3>시험 수준 듣기 내장</h3>
+              <p>
+                듣기 과제에 원어민 속도 녹음과 전체 재생 컨트롤 포함.
+              </p>
+              <ul class="showcase-list">
+                <li>내장 오디오 플레이어</li>
+                <li>시험 섹션별 재생목록</li>
+                              </ul>
+            </div>
+            <div class="showcase-visual">
+              <div class="device-frame device-phone has-shot">
+                <figure class="screenshot-placeholder">
+                  <img src="/assets/screenshots/audio.jpg" alt="Listening audio player" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+          </article>
+
+          <article class="showcase-row reverse reveal">
+            <div class="showcase-copy">
+              <span class="showcase-tag">작문 검토</span>
+              <h3>자유 텍스트에 대한 AI 교정</h3>
+              <p>
+                앱의 작문 섹션에서 답변을 작성하면 문법 교정, 어휘 제안, 점수 추정을 받을 수 있습니다.
+              </p>
+              <ul class="showcase-list">
+                <li>인라인 오류 하이라이트</li>
+                <li>쉬운 언어로 설명</li>
+                <li>제출당 점수 추정</li>
+              </ul>
+            </div>
+            <div class="showcase-visual">
+              <div class="device-frame device-phone has-shot">
+                <figure class="screenshot-placeholder">
+                  <img src="/assets/screenshots/writing.jpg" alt="AI writing feedback" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+          </article>
+
+          <article class="showcase-row reveal">
+            <div class="showcase-copy">
+              <span class="showcase-tag">통계</span>
+              <h3>자신의 위치를 정확히 파악</h3>
+              <p>
+                개인 대시보드가 시험 점수, 기술별 분석, 학습 연속일수, 약점을 표시.
+              </p>
+              <ul class="showcase-list">
+                <li>기술별 진행 막대</li>
+                <li>시험 점수 이력</li>
+                <li>일일 연속 기록 추적</li>
+              </ul>
+            </div>
+            <div class="showcase-visual">
+              <div class="device-frame device-phone has-shot">
+                <figure class="screenshot-placeholder">
+                  <img src="/assets/screenshots/stats.jpg" alt="Progress statistics dashboard" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
+
     <!-- Screenshot gallery -->
     <section class="section section-dark" id="screenshots">
       <div class="container">
         <div class="section-header center reveal">
-          <p class="eyebrow eyebrow-light">Inside the app</p>
-          <h2>See it in action</h2>
-          <p>Practice exams, audio drills, writing feedback, and progress tracking — all on your iPhone.</p>
+          <p class="eyebrow eyebrow-light">앱 내부</p>
+          <h2>GoethePrep을 실제로 보기</h2>
+          <p>모의시험, 오디오 드릴, 작문 피드백, 진도 추적 — 모두 iPhone에서.</p>
         </div>
 
         <div class="screenshot-carousel reveal">
           <button class="carousel-btn carousel-prev" id="carousel-prev" aria-label="Previous screenshot">←</button>
           <div class="carousel-track-wrap">
             <div class="carousel-track" id="carousel-track">
+              <figure class="carousel-slide">
+                <div class="device-frame device-phone carousel-device has-shot">
+                  <div class="screenshot-placeholder"><img src="/assets/screenshots/home.png" alt="Home dashboard" loading="lazy" /></div>
+                </div>
+                <figcaption>Home dashboard</figcaption>
+              </figure>
+              <figure class="carousel-slide">
+                <div class="device-frame device-phone carousel-device has-shot">
+                  <div class="screenshot-placeholder"><img src="/assets/screenshots/exam.jpg" alt="Exam selection" loading="lazy" /></div>
+                </div>
+                <figcaption>Exam selection</figcaption>
+              </figure>
+              <figure class="carousel-slide">
+                <div class="device-frame device-phone carousel-device has-shot">
+                  <div class="screenshot-placeholder"><img src="/assets/screenshots/audio.jpg" alt="Audio player" loading="lazy" /></div>
+                </div>
+                <figcaption>Audio player</figcaption>
+              </figure>
+              <figure class="carousel-slide">
+                <div class="device-frame device-phone carousel-device has-shot">
+                  <div class="screenshot-placeholder"><img src="/assets/screenshots/writing.jpg" alt="Writing review" loading="lazy" /></div>
+                </div>
+                <figcaption>Writing review</figcaption>
+              </figure>
+              <figure class="carousel-slide">
+                <div class="device-frame device-phone carousel-device has-shot">
+                  <div class="screenshot-placeholder"><img src="/assets/screenshots/stats.jpg" alt="Statistics" loading="lazy" /></div>
+                </div>
+                <figcaption>Statistics</figcaption>
+              </figure>
             </div>
           </div>
           <button class="carousel-btn carousel-next" id="carousel-next" aria-label="Next screenshot">→</button>
@@ -150,16 +302,61 @@
         <div class="carousel-dots" id="carousel-dots" aria-label="Screenshot navigation"></div>
       </div>
     </section>
+
+    <!-- How it works -->
+    <section class="section" id="how-it-works">
+      <div class="container">
+        <div class="section-header center reveal">
+          <p class="eyebrow">간단한 흐름</p>
+          <h2>사용 방법</h2>
+          <p>다운로드부터 시험 당일까지 — 준비 완료를 위한 3단계.</p>
+        </div>
+
+        <div class="steps-grid reveal">
+          <article class="step-card">
+            <span class="step-num">1</span>
+            <h3>App Store에서 다운로드</h3>
+            <p>iPhone 또는 iPad에 GoethePrep 설치, 레벨 선택, 맞춤 학습 계획 확인.</p>
+          </article>
+          <article class="step-card">
+            <span class="step-num">2</span>
+            <h3>매일 연습</h3>
+            <p>완전한 시험과 빠른 드릴을 번갈아. 듣기에는 오디오, 쓰기에는 AI 검토 활용.</p>
+          </article>
+          <article class="step-card">
+            <span class="step-num">3</span>
+            <h3>추적 및 개선</h3>
+            <p>Watch your stats climb. Focus on weak skills until you're consistently hitting your target score.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <!-- Blog preview -->
     <section class="section section-alt" id="blog">
       <div class="container">
         <div class="section-header center reveal">
-          <p class="eyebrow">Exam guides</p>
-          <h2>Exam tips & preparation</h2>
-          <p>Free guides on exam format, passing scores, and strategies for every skill.</p>
+          <p class="eyebrow">시험 가이드</p>
+          <h2>괴테 시험 팁 및 준비</h2>
+          <p>시험 형식, 합격 점수, 각 기술 전략에 대한 무료 가이드.</p>
         </div>
 
         <div class="blog-preview-grid reveal">
+          <a href="/ko/blog/goethe-b1-exam-format/" class="blog-preview-card">
+            <span class="blog-tag">B1 · Format</span>
+            <h3>Goethe B1 exam format: complete guide</h3>
+            <p>Four skills, timing, parts, and how the 100-point scale works.</p>
+          </a>
+          <a href="/ko/blog/goethe-exam-passing-score/" class="blog-preview-card">
+            <span class="blog-tag">Scoring</span>
+            <h3>What score do you need to pass?</h3>
+            <p>60/100 overall plus minimums in Writing and Sprechen explained.</p>
+          </a>
+          <a href="/ko/blog/how-to-prepare-goethe-exam/" class="blog-preview-card">
+            <span class="blog-tag">Preparation</span>
+            <h3>How to prepare step-by-step</h3>
+            <p>From level check to mock exams and exam-day checklist.</p>
+          </a>
         </div>
 
         <p class="blog-preview-more reveal" style="text-align:center; margin-top:1.75rem;">
@@ -167,24 +364,54 @@
         </p>
       </div>
     </section>
+
     <!-- FAQ -->
     <section class="section" id="faq">
       <div class="container container-narrow">
         <div class="section-header center reveal">
-          <p class="eyebrow">Questions</p>
-          <h2>Frequently asked</h2>
+          <p class="eyebrow">질문</p>
+          <h2>자주 묻는 질문</h2>
         </div>
 
         <div class="faq-list reveal">
+          <details class="faq-item" open>
+            <summary>괴테 인스티투트와 제휴되어 있나요?</summary>
+            <p>아니요. GoethePrep은 독립적인 학습 도구입니다. 시험 형식은 공식 Goethe-Zertifikat 구조를 기반으로 하지만, 괴테 인스티투트의 승인은 받지 않았습니다.</p>
+          </details>
+          <details class="faq-item">
+            <summary>앱은 어떤 레벨을 커버하나요?</summary>
+            <p>괴테 시험 전 6레벨: A1, A2, B1, B2, C1, C2. 앱 내에서 레벨을 선택하면 해당 레벨의 형식과 난이도에 맞춤 시험이 제공됩니다.</p>
+          </details>
+          <details class="faq-item">
+            <summary>모의시험이 몇 회분 포함되어 있나요?</summary>
+            <p>레벨당 7회분의 완전한 모의시험. 각 100점 만점으로 읽기, 듣기, 쓰기, 말하기를 공식 형식으로 커버.</p>
+          </details>
+          <details class="faq-item">
+            <summary>AI 작문 교정은 어떻게 작동하나요?</summary>
+            <p>작문 섹션에서 독일어로 자유롭게 답변을 작성합니다. 앱이 문법 오류를 하이라이트하고, 더 나은 어휘를 제안하며, 점수를 추정합니다.</p>
+          </details>
+          <details class="faq-item">
+            <summary>실제 시험에 합격하려면 몇 점이 필요한가요?</summary>
+            <p>대부분의 괴테 시험 레벨에서 전체 100점 중 60점 이상이 필요합니다. 일부 레벨에서는 쓰기와 말하기에도 최저 기준이 있습니다.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Android에서 사용할 수 있나요?</summary>
+            <p>GoethePrep은 현재 App Store를 통해 iPhone과 iPad에서만 사용 가능합니다. Android 버전은 현재 계획되어 있지 않습니다.</p>
+          </details>
+          <details class="faq-item">
+            <summary>무료인가요?</summary>
+            <p>첫 번째 완전한 모의시험은 무료입니다. 구독으로 7개 시험 전체, 빠른 드릴, AI 작문 피드백, 상세 진도 통계를 이용할 수 있습니다.</p>
+          </details>
         </div>
       </div>
     </section>
+
     <!-- Download CTA -->
     <section class="section cta-section" id="download">
       <div class="container cta-inner reveal">
         <div class="cta-copy">
-          <h2>Ready to pass?</h2>
-          <p>Download on your iPhone or iPad — pick your level and turn spare minutes into real exam progress.</p>
+          <h2>합격할 준비가 되셨나요?</h2>
+          <p>iPhone 또는 iPad에 GoethePrep을 다운로드 — 레벨을 선택하고 빈 시간을 실질적인 시험 진전으로 바꾸세요.</p>
           <a href="https://apps.apple.com/app/goetheprep/id6776348982?pt=126845029&ct=goetheprep-main&mt=8" class="app-store-badge app-store-badge--lg app-store-badge--light" aria-label="Download on the App Store">
             <svg class="app-store-badge__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
             <span class="app-store-badge__text"><small>Download on the</small><strong>App Store</strong></span>
@@ -195,27 +422,30 @@
         </div>
       </div>
     </section>
+
   </main>
 
   <footer class="site-footer">
     <div class="container footer-grid">
       <div class="footer-brand-block">
         <p class="footer-brand">Goethe<span>Prep</span></p>
-        <p class="footer-tagline">Exam prep for iPhone & iPad.</p>
+        <p class="footer-tagline">괴테 A1–C2 시험 준비 (iPhone·iPad).</p>
       </div>
       <nav class="footer-nav" aria-label="Footer">
-        <a href="/ko/#features">Features</a>
+        <a href="#features">Features</a>
         <a href="/ko/blog/">Blog</a>
-        <a href="/ko/#faq">FAQ</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#faq">FAQ</a>
       </nav>
       <p class="footer-legal">
-        Unofficial practice tool — not affiliated with the Goethe-Institut.<br>
+        비공식 연습 도구 — 괴테 인스티투트와 무관.<br>
         &copy; 2026 GoethePrep · goetheprep.com
       </p>
     </div>
   </footer>
 
-  <script src="/js/main.js?v=20260707a"></script>
+  <script src="/js/main.js?v=20260611f"></script>
+  <script src="/js/demo-quiz.js?v=20260611e"></script>
   <script src="/shared/lang-selector.js" defer></script>
 </body>
 </html>
