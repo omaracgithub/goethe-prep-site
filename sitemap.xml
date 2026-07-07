@@ -783,44 +783,4 @@
     <xhtml:link rel="alternate" hreflang="zh" href="https://goetheprep.com/zh/blog/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://goetheprep.com/blog/" />
   </url>
-  <url>
-    <loc>https://goetheprep.com/blog/goethe-b1-exam-format.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://goetheprep.com/blog/goethe-b1-vs-b2.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://goetheprep.com/blog/goethe-b2-exam-tips.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://goetheprep.com/blog/goethe-exam-passing-score.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://goetheprep.com/blog/goethe-exam-study-plan.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://goetheprep.com/blog/goethe-horen-listening-tips.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://goetheprep.com/blog/goethe-schreiben-writing-guide.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://goetheprep.com/blog/how-to-prepare-goethe-exam.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
 </urlset>
