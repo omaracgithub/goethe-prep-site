@@ -130,7 +130,7 @@
 
 .article-layout {
   display: grid;
-  grid-template-columns: 240px 1fr;
+  grid-template-columns: 1fr;
   gap: 3rem;
   align-items: start;
 }
@@ -188,7 +188,7 @@
 }
 
 .article-content {
-  max-width: 68ch;
+  max-width: 800px;
   font-size: 1.05rem;
   line-height: 1.75;
 }
